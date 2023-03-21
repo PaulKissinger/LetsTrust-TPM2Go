@@ -144,8 +144,8 @@ int main(int argc, char **argv){
 
 static int LtTpm2Go_SetGpioValue(libusb_device_handle *devHandle, const int gpioNumber, const int value){
 
-        int length = 0; 
-        int lValue = 0; // local value 
+        int length = 0;
+        int lValue = 0; // local value
         unsigned char buffer[1];
         int rStatus = EXIT_SUCCESS;
         int ioTimeout = 5000;
@@ -175,7 +175,7 @@ static int LtTpm2Go_SetGpioValue(libusb_device_handle *devHandle, const int gpio
 static void print_info()
 {
         printf("'-c' --cycle : cycle the reset line of the TPM \n");
-        printf("'-l' --level [option] : set the reset line of the TPM to high or low [\"high\",\"low\"]\n" );
+        printf("'-l' --level [option] : set the reset line of the TPM to high or low [\"high\",\"low\"]\n";
         printf("'-h' --help : print this help\n");
 }
 
