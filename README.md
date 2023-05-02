@@ -6,6 +6,6 @@ Things associated with the LetsTrust-TPM2Go USB-Stick
 
 A LetsTrust-TPM2Go USB Stick is NOT compatible with Microsoft Windows 11 TPM 2.0 requirement!
 
-# Let's trust-TPM2Go cycler reset
+# LetsTrust-TPM2Go reset cycler 
 
 This subfolder contains the source code required to reset the LetsTrust-TPM2Go.
