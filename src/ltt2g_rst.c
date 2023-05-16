@@ -175,7 +175,7 @@ static int LtTpm2Go_SetGpioValue(libusb_device_handle *devHandle, const int gpio
 static void print_info()
 {
         printf("'-c' --cycle : cycle the reset line of the TPM \n");
-        printf("'-l' --level [option] : set the reset line of the TPM to high or low [\"high\",\"low\"]\n";
+        printf("'-l' --level [option] : set the reset line of the TPM to high or low [\"high\",\"low\"]\n");
         printf("'-h' --help : print this help\n");
 }
 
