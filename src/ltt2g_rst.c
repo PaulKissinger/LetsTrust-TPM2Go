@@ -50,7 +50,7 @@ int main(int argc, char **argv){
                 fprintf(stderr, "libusb init failed.");
         }
 
-        dev_handle = libusb_open_device_with_vid_pid (ctx, VID_CYPRESS, PID_CYUSBSPI);
+        dev_handle = libusb_open_device_with_vid_pid (ctx, VID_PI3G, PID_LTT2GO);
         if(dev_handle == NULL){
                 fprintf(stderr, "LetsTrust-TPM2Go not found.");
         }
@@ -106,18 +106,18 @@ int main(int argc, char **argv){
                                         break;
                                 default:
                                         if('l' == optopt){
-                                                fprintf(stderr, "-l --level need an parameter \"high\" or \"low\". Use '-h' for the help.\n");
+                                                fprintf(stderr, "-l --level need an parameter \"high\" or \"low\". Use '-h' for help.\n");
                                                 ret_val = ERR_BAD_CMD;
 
                                         }
                                         else if(isprint(optopt)){
                                                 // Unknown parameter.
-                                                fprintf(stderr, "Unknown option '-%c'. Use '-h' for the help.\n", optopt);
+                                                fprintf(stderr, "Unknown option '-%c'. Use '-h' for help.\n", optopt);
                                                 ret_val = ERR_BAD_CMD;
                                         }
                                         else{
                                                 // Non-printable character.
-                                                fprintf(stderr, "Invalid command line character. Use '-h' for the help.\n");
+                                                fprintf(stderr, "Invalid command line character. Use '-h' for help.\n");
                                                 ret_val = ERR_BAD_CMD;
                                         }
                                         break;
@@ -129,7 +129,6 @@ int main(int argc, char **argv){
                 // If no error has occurred, handle remaining unknown params, if present.
                 RET_VAL_CHECK(ret_val); // If we do not check and break here in case of an error, we would override the previous error
                 for (i = optind; i < argc; i++){
-                        ret_val = ERR_BAD_CMD;
                         ret_val = ERR_BAD_CMD;
                         fprintf(stderr, "Non-option argument '%s'. Use '-h' for help.\n", argv[i]);
                         break;
@@ -144,6 +143,7 @@ int main(int argc, char **argv){
 
 static int LtTpm2Go_SetGpioValue(libusb_device_handle *devHandle, const int gpioNumber, const int value){
 
+        // ---------- Local declarations ----------
         int length = 0;
         int lValue = 0; // local value
         unsigned char buffer[1];
