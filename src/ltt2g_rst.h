@@ -2,9 +2,9 @@
 #define _LTT2G_RST_
 /**
   * @brief              LetsTrust-TPM2Go reset handler
-  * @details    ltt2g_rst.h implements all LetsTrustTPM2Go_ResetToggle byte commands and the prototype declarations for ltt2g_rst.c.
+  * @details            ltt2g_rst.h implements all LetsTrustTPM2Go_ResetToggle byte commands and the prototype declarations for ltt2g_rst.c.
   * @file               ltt2g_rst.h
-  * @date               2023/03/04
+  * @date               2023/09/19
   */
 
 #include <stdio.h>
@@ -22,9 +22,9 @@
 #include <libusb-1.0/libusb.h>
 
 //-------------"Defines"-------------
-#define ERR_BAD_CMD             -2                      ///< Error code for a bad command line argument or option.
+#define ERR_BAD_CMD             -2         ///< Error code for a bad command line argument or option.
 #ifndef INT_MAX
-#define INT_MAX                 0x7FFFFFF       ///< The maximum value of a signed 32-bit integer.
+#define INT_MAX                 0x7FFFFFF  ///< The maximum value of a signed 32-bit integer.
 #endif
 #define CY_VENDOR_REQUEST_DEVICE_TO_HOST 0xC0
 #define CY_GPIO_SET_VALUE_CMD 0xDB
@@ -36,7 +36,7 @@
 
 //-------------"Macros"-------------
 // Return value check
-#define RET_VAL_CHECK(x) if (EXIT_SUCCESS != x) { break; } ///< Return value check
+#define RET_VAL_CHECK(x) if (EXIT_SUCCESS != x) { break; }
 
 //--------------"Enums"--------------
 
@@ -51,13 +51,13 @@
   * @retval     EXIT_SUCCESS                            In case of success.
   * @retval     ERR_BAD_CMD                             In case of bad user input.
   * @retval     LIBUSB_ERROR_TIMEOUT                    In case of an Timeout of the USB-Bridge.
-  * @date       2023/03/05
+  * @date       2023/09/19
   */
 static int LtTpm2Go_SetGpioValue(libusb_device_handle *dev_handle, const int gpioNumber, const int value);
 
 /**
   * @brief      Print the command line usage and switches.
-  * @date       2023/03/05
+  * @date       2023/09/19
   */
 static void print_info();
 

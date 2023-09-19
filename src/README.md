@@ -15,7 +15,7 @@ This has not been tested, but LTT2G RST may run on many other little-endian hard
 
 ## 1.2 Starting Out
 
-LetsTrust-TPM2Go USB-Sticks are available for purchase at [buyzero.de Webshop] (www.buyzero.de).
+LetsTrust-TPM2Go USB-Sticks are available for purchase at [buyzero.de Webshop] (https://buyzero.de/products/letstrust-tpm2go).
 
 Before you can execute LTT2G RST, you must compile it:
 1. Navigate to the folder containing the LTT2G RST source code
@@ -23,7 +23,6 @@ Before you can execute LTT2G RST, you must compile it:
 make
 
 Remember that this tool works without root! Please use this resource as a guide or for testing.
-
 
 # 2. Utilization of LTT2G RST
 
@@ -33,7 +32,7 @@ LTT2G RST operates as specified:
 
 Call: './ltt2g_rst <option>'
 
-For a summary of the available commands, run './ltt2g_rst -h' to obtain the help page.
+For a summary of the available commands, run './ltt2g_rst -h' to obtain the help page.
 
 option | explanation
 ------|--------
@@ -41,10 +40,11 @@ option | explanation
 '-l' --level [option] : set the reset line of the TPM to high or low [\"high\",\"low\"]
 '-h' --help : print this help
 
-
 # 2.2 Example
 
 - Send the command to cycle: './ltt2g_rst -c'
+- Send the command to cycle: './ltt2g_rst -l high'
+- Send the command to cycle: './ltt2g_rst -l low'
 
 # 3 FAQ and troubleshooting
 
@@ -54,8 +54,8 @@ If you encounter any error, please make sure
   - dmesg
 
     [ 2023.051400] usb 3-2: new full-speed USB device number 5 using xhci_hcd
-    [ 2023.051410] usb 3-2: New USB device found, idVendor=04b4, idProduct=0004, bcdDevice= 0.00
+    [ 2023.051410] usb 3-2: New USB device found, idVendor=365d, idProduct=1337, bcdDevice= 0.00
     [ 2023.051437] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
     [ 2023.051459] usb 3-2: Product: LetsTrust-TPM2Go
     [ 2023.051478] usb 3-2: Manufacturer: www.pi3g.com
-    [ 2023.051489] usb 3-2: SerialNumber: xxxxx
+    [ 2023.051489] usb 3-2: SerialNumber: Y23CW29NR00000RND987654321012

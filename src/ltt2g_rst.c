@@ -2,7 +2,7 @@
   * @brief              LetsTrust-TPM2Go reset handler
   * @details            ltt2g_rst.c implements a basic method to reset the TPM on a LetsTrust-TPM2Go.
   * @file               ltt2g_rst.c
-  * @date               2023/03/04
+  * @date               2023/09/19
   * @copyright  MIT.\n
   * \n
   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
@@ -178,11 +178,3 @@ static void print_info()
         printf("'-l' --level [option] : set the reset line of the TPM to high or low [\"high\",\"low\"]\n");
         printf("'-h' --help : print this help\n");
 }
-
-
-
-
-
-
-
-
